@@ -78,7 +78,6 @@ bot.on('message', async (msg) => {
         }
 
       })
-      bot.sendMessage(1228886912, `Заявка от @${from.username}:\nОткуда узнал о нашем проекте: ${req.from}\nОпыт в скаме: ${req.experience}\nВремя: ${req.time}\nЦели: ${text}`)
 
       return bot.sendMessage(chat.id, `⏳ Отлично, твоя заявка отправлена на проверку ТСам проекта
 
@@ -134,7 +133,7 @@ bot.on('callback_query', async (query) => {
     await Request.findOneAndDelete({ state: { $regex: regexPattern } })
     bot.deleteMessage(chat.id, query.message.message_id)
 
-    return bot.sendMessage(id, `✅ Ваша заявка принята ТСами проекта\nСсылка на группу нашей команды: https://t.me/+SMB7mi1CoCFlZjc6`)
+    return bot.sendMessage(id, `✅ Ваша заявка принята ТСами проекта\nСсылка на группу нашей команды: https://t.me/+D-S4d7xXemozNzUy`)
   }
 
   if (data.startsWith('decline')) {
